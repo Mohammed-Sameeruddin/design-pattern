@@ -3,8 +3,8 @@ package designPattern.chainOfResponsibility;
 public class App {
 
     public static void main(String ...args){
-        AppHandler handler = new DBHandler();
-        handler.setNextHandler(new BackendHandler());
+        AppHandler handler = new DBHandler(false);
+        handler.setNextHandler(new BackendHandler(true));
 
         FrontendApp app = new FrontendApp(handler);
 

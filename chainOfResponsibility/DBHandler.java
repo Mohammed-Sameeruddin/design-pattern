@@ -2,6 +2,10 @@ package designPattern.chainOfResponsibility;
 
 public class DBHandler extends AppHandler{
     public boolean isConnected;
+
+    DBHandler(boolean isConnected){
+        this.isConnected = isConnected;
+    }
     @Override
     public boolean handle() {
         if(!isConnected){

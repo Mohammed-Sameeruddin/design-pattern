@@ -4,6 +4,10 @@ public class BackendHandler extends AppHandler{
 
     public boolean isServiceUp;
 
+    BackendHandler(boolean isServiceUp){
+        this.isServiceUp = isServiceUp;
+    }
+
     @Override
     public boolean handle() {
         if(!isServiceUp){
